@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>STATS FIRTHLOG Extension Command</title>
+
+<link rel="stylesheet" type="text/css" href="extsyntax.css" />
+
+
+
+
+
+</head>
+
+<body>
+<h1>STATS FIRTHLOG Extension Command</h1>
+
+<p>Compute Firth logistic regression.</p>
+<div class="syntax">
+<p>STATS FIRTHLOG DEPENDENT=<em>variable</em><sup>&#42;</sup>
+    INDEP=<em>list of variables</em><sup>&#42;</sup></p>
+
+<p>/OPTIONS FIRTH=YES or NO ALPHA=<em>sig level</em> PPL=PROFILE or WALD<br/>
+    MAXSTEP=<em>number</em> MAXHS=<em>integer</em> MAXIT=<em>integer</em>
+    LCONV=<em>number</em> XCONV=<em>number</em></p>
+
+<p>/OUTPUT PLOT=<em>list of integers</em></p>
+
+<p>/SAVE DATASET=<em>dataset</em>.</p>
+
+<p><sup>&#42;</sup> Default<br/>
+<sup>&#42;&#42;</sup> Required</p>
+</div>
+<p>STATS FIRTHLOG /HELP.  prints this information and does nothing else.</p>
+
+<pre class="example"><code>STATS FIRTHLOG DEPENDENT=y INDEP=x1 x2 x3
+/SAVE DATASET=casewiseresults.
+</code></pre>
+
+<p><strong>DEPENDENT</strong> and <strong>INDEP</strong> list the dependent (binary) and
+independent variables.  The dependent variable must
+have a scale measurement level and have values 0 and 1.</p>
+
+<h2>OPTIONS</h2>
+
+<p><strong>FIRTH</strong>=YES specifies the use of Firth&#39;s penalized maximum likelihood
+method.  NO specifies standard maximum likelihood.</p>
+
+<p><strong>PPL</strong>=PROFILE the use of the profile penalized log likelihood for
+the confidence intervals and tests.  WALD specifies WALD tests.</p>
+
+<p><strong>CONF</strong> specifies the confidence level.  It must be a number between 
+50 and 100.</p>
+
+<p><strong>MAXSTEP</strong> through <strong>XCONV</strong> specify iteration and convergence
+criteria.  </p>
+
+<ul>
+<li><strong>MAXIT</strong> is the maximum number of iterations. </li>
+<li><strong>MAXSTEP</strong> is the maximum step size in beta values per iteration.<br/></li>
+<li><strong>MAXHS</strong> is the
+maximum number of step halving in one iteration. </li>
+<li><strong>LCONV</strong> is
+the log likelihood convergence criterion</li>
+<li><strong>XCONV</strong> is the
+change criterion for values in the beta vector.</li>
+</ul>
+
+<h2>OUTPUT</h2>
+
+<p><strong>PLOT</strong> specifies plots of the likelihood against the parameter value
+for selected independent variables.  The variables are identified
+by their number in the independent variables list starting from 1.
+An index greater than the number of variables is ignored.  Categorical
+variables are not plotted.</p>
+
+<h2>SAVE</h2>
+
+<p><strong>DATASET</strong> is the name for saving casewise results, which include
+the predicted probability of the 1 value and the hat matrix
+diagonal element for each case.  The first column is the
+input case number.  The dataset is created even if
+convergence is not achieved.</p>
+
+<h3>Notes</h3>
+
+<p>Cases with missing data are always deleted.<br/>
+SPSS weights are not honored.<br/>
+With R3.1 and logistf 1.21, the hat matrix is not available.</p>
+
+<p>&copy; Copyright IBM Corp. 1989, 2014</p>
+
+</body>
+
+</html>
+
