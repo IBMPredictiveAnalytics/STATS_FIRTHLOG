@@ -1,0 +1,232 @@
+#/***********************************************************************
+# * Licensed Materials - Property of IBM 
+# *
+# * IBM SPSS Products: Statistics Common
+# *
+# * (C) Copyright IBM Corp. 1989, 2014
+# *
+# * US Government Users Restricted Rights - Use, duplication or disclosure
+# * restricted by GSA ADP Schedule Contract with IBM Corp. 
+# ************************************************************************/
+
+# NLS_ENCODING=UTF-8
+# IBMUPYTH
+
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: STATS_FIRTHLOG.R:85
+msgid "Firth Logistic Regression"
+msgstr ""
+"Firth 羅吉斯迴歸"
+
+#: STATS_FIRTHLOG.R:86
+msgid "Firth Logistic Regression: Warnings"
+msgstr ""
+"Firth 羅吉斯迴歸：警告"
+
+#: STATS_FIRTHLOG.R:91
+msgid "The R %s package is required but could not be loaded."
+msgstr ""
+"R %s 套件是必要套件，但無法載入。"
+
+#: STATS_FIRTHLOG.R:103
+msgid "The output dataset name is already in use."
+msgstr ""
+"輸出資料集名稱已在使用中。"
+
+#: STATS_FIRTHLOG.R:106
+msgid "The active dataset must have a name to create an output dataset"
+msgstr ""
+"作用中的資料集必須具有名稱，以建立輸出資料集"
+
+#: STATS_FIRTHLOG.R:116
+msgid "The dependent variable must have a scale measurement level"
+msgstr ""
+"依變數必須具有尺度測量水準"
+
+#: STATS_FIRTHLOG.R:122
+msgid "The dependent variable has values other than 0 and 1 or is constant"
+msgstr ""
+"依變數具有除 0 及 1 以外的值，或是常數"
+
+#: STATS_FIRTHLOG.R:171
+msgid "Dependent Variable"
+msgstr ""
+"依變數"
+
+#: STATS_FIRTHLOG.R:172
+msgid "Conf. Interval Type"
+msgstr ""
+"信賴區間類型"
+
+#: STATS_FIRTHLOG.R:173
+msgid "Conf. Interval Level (%)"
+msgstr ""
+"信賴區間水準 (%)"
+
+#: STATS_FIRTHLOG.R:174
+msgid "Estimation Method"
+msgstr ""
+"估計方法"
+
+#: STATS_FIRTHLOG.R:175
+msgid "Output Dataset"
+msgstr ""
+"輸出資料集"
+
+#: STATS_FIRTHLOG.R:176
+msgid "Likelihood Ratio Test"
+msgstr ""
+"概似比檢定"
+
+#: STATS_FIRTHLOG.R:177
+msgid "Degrees of Freedom"
+msgstr ""
+"自由度"
+
+#: STATS_FIRTHLOG.R:178
+msgid "Significance"
+msgstr ""
+"顯著性"
+
+#: STATS_FIRTHLOG.R:179
+msgid "Number of Complete Cases"
+msgstr ""
+"完整觀察值數目"
+
+#: STATS_FIRTHLOG.R:180
+msgid "Cases with Missing Data"
+msgstr ""
+"含有遺漏資料的觀察值"
+
+#: STATS_FIRTHLOG.R:181
+msgid "Number of Iterations"
+msgstr ""
+"反覆運算次數"
+
+#: STATS_FIRTHLOG.R:182
+msgid "Convergence Status"
+msgstr ""
+"收斂狀態"
+
+#: STATS_FIRTHLOG.R:183
+msgid "Last Log Likelihood Change"
+msgstr ""
+"前次對數概似值變更"
+
+#: STATS_FIRTHLOG.R:184
+msgid "Maximum Last Beta Change"
+msgstr ""
+"前次 β 變更上限"
+
+#: STATS_FIRTHLOG.R:190
+msgid "Profile penalized log likelihood"
+msgstr ""
+"剖面圖懲罰對數概似值"
+
+#: STATS_FIRTHLOG.R:191
+msgid "Wald"
+msgstr ""
+"Wald"
+
+#: STATS_FIRTHLOG.R:193
+msgid "Firth penalized maximum likelihood"
+msgstr ""
+"Firth 懲罰最大概似值"
+
+#: STATS_FIRTHLOG.R:194
+msgid "maximum likelihood"
+msgstr ""
+"最大概似值"
+
+#: STATS_FIRTHLOG.R:195
+msgid "--NA--"
+msgstr ""
+"--不適用--"
+
+#: STATS_FIRTHLOG.R:203
+msgid "FAILED"
+msgstr ""
+"失敗"
+
+#: STATS_FIRTHLOG.R:203
+msgid "Converged"
+msgstr ""
+"已收斂"
+
+#: STATS_FIRTHLOG.R:210
+msgid "Values"
+msgstr ""
+"值"
+
+#: STATS_FIRTHLOG.R:212
+msgid "Firth Logistic Regression Summary"
+msgstr ""
+"Firth 羅吉斯迴歸摘要"
+
+#: STATS_FIRTHLOG.R:214
+msgid "Results computed by R logistf package"
+msgstr ""
+"由 R logistf 套件計算的結果"
+
+#: STATS_FIRTHLOG.R:221
+msgid "Coefficient"
+msgstr ""
+"係數"
+
+#: STATS_FIRTHLOG.R:221
+msgid "Std. Error"
+msgstr ""
+"標準誤"
+
+#: STATS_FIRTHLOG.R:222
+msgid "Lower CI"
+msgstr ""
+"下限 CI"
+
+#: STATS_FIRTHLOG.R:222
+msgid "Upper CI"
+msgstr ""
+"上限 CI"
+
+#: STATS_FIRTHLOG.R:222
+msgid "Chi-Square"
+msgstr ""
+"卡方檢定"
+
+#: STATS_FIRTHLOG.R:224
+#: STATS_FIRTHLOG.R:225
+msgid "Coefficients"
+msgstr ""
+"係數"
+
+#: STATS_FIRTHLOG.R:227
+msgid "Dependent Variable: %s"
+msgstr ""
+"依變數：%s"
+
+#: STATS_FIRTHLOG.R:267
+msgid "Predicted probability"
+msgstr ""
+"預測機率"
+
+#: STATS_FIRTHLOG.R:269
+msgid "Hat Value"
+msgstr ""
+"Hat 值"
+
+#: STATS_FIRTHLOG.R:310
+msgid "End of procedure"
+msgstr ""
+"程序的結尾"
+
+#: STATS_FIRTHLOG.R:337
+msgid "Message Number"
+msgstr ""
+"訊息號碼"
+
+
