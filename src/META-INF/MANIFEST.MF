@@ -1,0 +1,17 @@
+Name: STATS FIRTHLOG
+Dialog-Specs: STATS_FIRTHLOG.spd
+Command-Specs: STATS_FIRTHLOG.xml
+Code-Files: STATS_FIRTHLOG.R
+Misc-Files: markdown.html,extsyntax.css,IBMdialogicon.png
+Summary: Firth logistic regression
+Description: This procedure calculates the Firth logistic regression m
+ odel, which can address the separation issues that can arise in stand
+ ard logistic regression.
+Author: JKP, IBM SPSS
+Version: 1.0.5
+Product-Version: 18
+Date: 4/22/14
+Categories: logistic statistics regression
+Plugins: R
+R-Packages: logistf
+Translation-Catalogues: lang
