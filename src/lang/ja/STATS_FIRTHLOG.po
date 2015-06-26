@@ -1,0 +1,232 @@
+#/***********************************************************************
+# * Licensed Materials - Property of IBM 
+# *
+# * IBM SPSS Products: Statistics Common
+# *
+# * (C) Copyright IBM Corp. 1989, 2014
+# *
+# * US Government Users Restricted Rights - Use, duplication or disclosure
+# * restricted by GSA ADP Schedule Contract with IBM Corp. 
+# ************************************************************************/
+
+# NLS_ENCODING=UTF-8
+# IBMUPYTH
+
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: STATS_FIRTHLOG.R:85
+msgid "Firth Logistic Regression"
+msgstr ""
+"Firth ロジスティック回帰"
+
+#: STATS_FIRTHLOG.R:86
+msgid "Firth Logistic Regression: Warnings"
+msgstr ""
+"Firth ロジスティック回帰: 警告"
+
+#: STATS_FIRTHLOG.R:91
+msgid "The R %s package is required but could not be loaded."
+msgstr ""
+"R %s パッケージが必要ですが、読み込むことができませんでした。"
+
+#: STATS_FIRTHLOG.R:103
+msgid "The output dataset name is already in use."
+msgstr ""
+"出力データセット名は既に使用されています。 "
+
+#: STATS_FIRTHLOG.R:106
+msgid "The active dataset must have a name to create an output dataset"
+msgstr ""
+"出力データセットを作成するには、アクティブ データセットに名前が必要です"
+
+#: STATS_FIRTHLOG.R:116
+msgid "The dependent variable must have a scale measurement level"
+msgstr ""
+"従属変数には、尺度測定水準が必要です。"
+
+#: STATS_FIRTHLOG.R:122
+msgid "The dependent variable has values other than 0 and 1 or is constant"
+msgstr ""
+"従属変数は、0 と 1 以外の値を含むか、または定数です"
+
+#: STATS_FIRTHLOG.R:171
+msgid "Dependent Variable"
+msgstr ""
+"従属変数"
+
+#: STATS_FIRTHLOG.R:172
+msgid "Conf. Interval Type"
+msgstr ""
+"信頼区間型"
+
+#: STATS_FIRTHLOG.R:173
+msgid "Conf. Interval Level (%)"
+msgstr ""
+"信頼区間レベル (%)"
+
+#: STATS_FIRTHLOG.R:174
+msgid "Estimation Method"
+msgstr ""
+"推定方法"
+
+#: STATS_FIRTHLOG.R:175
+msgid "Output Dataset"
+msgstr ""
+"出力データセット"
+
+#: STATS_FIRTHLOG.R:176
+msgid "Likelihood Ratio Test"
+msgstr ""
+"尤度比検定"
+
+#: STATS_FIRTHLOG.R:177
+msgid "Degrees of Freedom"
+msgstr ""
+"自由度"
+
+#: STATS_FIRTHLOG.R:178
+msgid "Significance"
+msgstr ""
+"有意"
+
+#: STATS_FIRTHLOG.R:179
+msgid "Number of Complete Cases"
+msgstr ""
+"完全なケースの数"
+
+#: STATS_FIRTHLOG.R:180
+msgid "Cases with Missing Data"
+msgstr ""
+"欠損データのあるケース"
+
+#: STATS_FIRTHLOG.R:181
+msgid "Number of Iterations"
+msgstr ""
+"反復回数"
+
+#: STATS_FIRTHLOG.R:182
+msgid "Convergence Status"
+msgstr ""
+"収束状態"
+
+#: STATS_FIRTHLOG.R:183
+msgid "Last Log Likelihood Change"
+msgstr ""
+"最後の対数尤度変更"
+
+#: STATS_FIRTHLOG.R:184
+msgid "Maximum Last Beta Change"
+msgstr ""
+"最大の最終ベータ変更"
+
+#: STATS_FIRTHLOG.R:190
+msgid "Profile penalized log likelihood"
+msgstr ""
+"プロファイル ペナルティ付き対数尤度"
+
+#: STATS_FIRTHLOG.R:191
+msgid "Wald"
+msgstr ""
+"Wald"
+
+#: STATS_FIRTHLOG.R:193
+msgid "Firth penalized maximum likelihood"
+msgstr ""
+"Firth ペナルティ付き最尤法"
+
+#: STATS_FIRTHLOG.R:194
+msgid "maximum likelihood"
+msgstr ""
+"最尤法"
+
+#: STATS_FIRTHLOG.R:195
+msgid "--NA--"
+msgstr ""
+"--NA--"
+
+#: STATS_FIRTHLOG.R:203
+msgid "FAILED"
+msgstr ""
+"FAILED"
+
+#: STATS_FIRTHLOG.R:203
+msgid "Converged"
+msgstr ""
+"収束済み"
+
+#: STATS_FIRTHLOG.R:210
+msgid "Values"
+msgstr ""
+"値"
+
+#: STATS_FIRTHLOG.R:212
+msgid "Firth Logistic Regression Summary"
+msgstr ""
+"Firth ロジスティック回帰の要約"
+
+#: STATS_FIRTHLOG.R:214
+msgid "Results computed by R logistf package"
+msgstr ""
+"R logistf パッケージによって計算された結果"
+
+#: STATS_FIRTHLOG.R:221
+msgid "Coefficient"
+msgstr ""
+"係数"
+
+#: STATS_FIRTHLOG.R:221
+msgid "Std. Error"
+msgstr ""
+"標準誤差"
+
+#: STATS_FIRTHLOG.R:222
+msgid "Lower CI"
+msgstr ""
+"下限 CI"
+
+#: STATS_FIRTHLOG.R:222
+msgid "Upper CI"
+msgstr ""
+"上限 CI"
+
+#: STATS_FIRTHLOG.R:222
+msgid "Chi-Square"
+msgstr ""
+"カイ 2 乗"
+
+#: STATS_FIRTHLOG.R:224
+#: STATS_FIRTHLOG.R:225
+msgid "Coefficients"
+msgstr ""
+"係数"
+
+#: STATS_FIRTHLOG.R:227
+msgid "Dependent Variable: %s"
+msgstr ""
+"従属変数 : %s"
+
+#: STATS_FIRTHLOG.R:267
+msgid "Predicted probability"
+msgstr ""
+"予測確率"
+
+#: STATS_FIRTHLOG.R:269
+msgid "Hat Value"
+msgstr ""
+"ハット値"
+
+#: STATS_FIRTHLOG.R:310
+msgid "End of procedure"
+msgstr ""
+"手順の終わり"
+
+#: STATS_FIRTHLOG.R:337
+msgid "Message Number"
+msgstr ""
+"メッセージ番号"
+
+
