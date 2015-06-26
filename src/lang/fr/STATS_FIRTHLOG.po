@@ -1,0 +1,232 @@
+#/***********************************************************************
+# * Licensed Materials - Property of IBM 
+# *
+# * IBM SPSS Products: Statistics Common
+# *
+# * (C) Copyright IBM Corp. 1989, 2014
+# *
+# * US Government Users Restricted Rights - Use, duplication or disclosure
+# * restricted by GSA ADP Schedule Contract with IBM Corp. 
+# ************************************************************************/
+
+# NLS_ENCODING=UTF-8
+# IBMUPYTH
+
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: STATS_FIRTHLOG.R:85
+msgid "Firth Logistic Regression"
+msgstr ""
+"Régression logistique de Firth"
+
+#: STATS_FIRTHLOG.R:86
+msgid "Firth Logistic Regression: Warnings"
+msgstr ""
+"Régression logistique de Firth : Avertissements"
+
+#: STATS_FIRTHLOG.R:91
+msgid "The R %s package is required but could not be loaded."
+msgstr ""
+"Le pack R %s est requis mais n'a pas pu être chargé."
+
+#: STATS_FIRTHLOG.R:103
+msgid "The output dataset name is already in use."
+msgstr ""
+"Le nom du jeu de données de sortie est déjà utilisé."
+
+#: STATS_FIRTHLOG.R:106
+msgid "The active dataset must have a name to create an output dataset"
+msgstr ""
+"Le nom du jeu de données actif doit comporter un nom pour créer un jeu de données de sortie."
+
+#: STATS_FIRTHLOG.R:116
+msgid "The dependent variable must have a scale measurement level"
+msgstr ""
+"La variable dépendante doit comporter un niveau de mesure d'échelle."
+
+#: STATS_FIRTHLOG.R:122
+msgid "The dependent variable has values other than 0 and 1 or is constant"
+msgstr ""
+"La variable dépendante possède des valeurs autres que 0 et 1 ou il s'agit d'une constante."
+
+#: STATS_FIRTHLOG.R:171
+msgid "Dependent Variable"
+msgstr ""
+"Variable dépendante"
+
+#: STATS_FIRTHLOG.R:172
+msgid "Conf. Interval Type"
+msgstr ""
+"Type d'intervalle de confiance"
+
+#: STATS_FIRTHLOG.R:173
+msgid "Conf. Interval Level (%)"
+msgstr ""
+"Niveau d'intervalle de confiance (%)"
+
+#: STATS_FIRTHLOG.R:174
+msgid "Estimation Method"
+msgstr ""
+"Méthode d'estimation"
+
+#: STATS_FIRTHLOG.R:175
+msgid "Output Dataset"
+msgstr ""
+"Jeu de données de sortie"
+
+#: STATS_FIRTHLOG.R:176
+msgid "Likelihood Ratio Test"
+msgstr ""
+"Test du rapport de vraisemblance"
+
+#: STATS_FIRTHLOG.R:177
+msgid "Degrees of Freedom"
+msgstr ""
+"Degrés de liberté"
+
+#: STATS_FIRTHLOG.R:178
+msgid "Significance"
+msgstr ""
+"Signification"
+
+#: STATS_FIRTHLOG.R:179
+msgid "Number of Complete Cases"
+msgstr ""
+"Nombre d'observations complètes"
+
+#: STATS_FIRTHLOG.R:180
+msgid "Cases with Missing Data"
+msgstr ""
+"Observations avec données manquantes"
+
+#: STATS_FIRTHLOG.R:181
+msgid "Number of Iterations"
+msgstr ""
+"Nombre d'itérations"
+
+#: STATS_FIRTHLOG.R:182
+msgid "Convergence Status"
+msgstr ""
+"Statut de convergence"
+
+#: STATS_FIRTHLOG.R:183
+msgid "Last Log Likelihood Change"
+msgstr ""
+"Dernière modification du log de vraisemblance"
+
+#: STATS_FIRTHLOG.R:184
+msgid "Maximum Last Beta Change"
+msgstr ""
+"Dernière modification bêta maximale"
+
+#: STATS_FIRTHLOG.R:190
+msgid "Profile penalized log likelihood"
+msgstr ""
+"Log de vraisemblance pénalisée de profil"
+
+#: STATS_FIRTHLOG.R:191
+msgid "Wald"
+msgstr ""
+"Wald"
+
+#: STATS_FIRTHLOG.R:193
+msgid "Firth penalized maximum likelihood"
+msgstr ""
+"Maximum de vraisemblance pénalisée de Firth"
+
+#: STATS_FIRTHLOG.R:194
+msgid "maximum likelihood"
+msgstr ""
+"Maximum de vraisemblance"
+
+#: STATS_FIRTHLOG.R:195
+msgid "--NA--"
+msgstr ""
+"--NA--"
+
+#: STATS_FIRTHLOG.R:203
+msgid "FAILED"
+msgstr ""
+"ECHEC"
+
+#: STATS_FIRTHLOG.R:203
+msgid "Converged"
+msgstr ""
+"Convergence réalisée"
+
+#: STATS_FIRTHLOG.R:210
+msgid "Values"
+msgstr ""
+"Valeurs"
+
+#: STATS_FIRTHLOG.R:212
+msgid "Firth Logistic Regression Summary"
+msgstr ""
+"Récapitulatif de la régression logistique de Firth"
+
+#: STATS_FIRTHLOG.R:214
+msgid "Results computed by R logistf package"
+msgstr ""
+"Résultats calculés à l'aide du pack R logistf"
+
+#: STATS_FIRTHLOG.R:221
+msgid "Coefficient"
+msgstr ""
+"Coefficient"
+
+#: STATS_FIRTHLOG.R:221
+msgid "Std. Error"
+msgstr ""
+"Erreur std."
+
+#: STATS_FIRTHLOG.R:222
+msgid "Lower CI"
+msgstr ""
+"Borne inférieure de l'I.C"
+
+#: STATS_FIRTHLOG.R:222
+msgid "Upper CI"
+msgstr ""
+"Borne supérieure de l'I.C"
+
+#: STATS_FIRTHLOG.R:222
+msgid "Chi-Square"
+msgstr ""
+"Khi-deux"
+
+#: STATS_FIRTHLOG.R:224
+#: STATS_FIRTHLOG.R:225
+msgid "Coefficients"
+msgstr ""
+"Coefficients"
+
+#: STATS_FIRTHLOG.R:227
+msgid "Dependent Variable: %s"
+msgstr ""
+"Variable dépendante : %s"
+
+#: STATS_FIRTHLOG.R:267
+msgid "Predicted probability"
+msgstr ""
+"Probabilité prédite"
+
+#: STATS_FIRTHLOG.R:269
+msgid "Hat Value"
+msgstr ""
+"Valeur chapeau"
+
+#: STATS_FIRTHLOG.R:310
+msgid "End of procedure"
+msgstr ""
+"Fin de la procédure"
+
+#: STATS_FIRTHLOG.R:337
+msgid "Message Number"
+msgstr ""
+"Numéro de message"
+
+
