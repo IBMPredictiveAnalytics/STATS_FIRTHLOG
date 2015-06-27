@@ -1,0 +1,232 @@
+#/***********************************************************************
+# * Licensed Materials - Property of IBM 
+# *
+# * IBM SPSS Products: Statistics Common
+# *
+# * (C) Copyright IBM Corp. 1989, 2014
+# *
+# * US Government Users Restricted Rights - Use, duplication or disclosure
+# * restricted by GSA ADP Schedule Contract with IBM Corp. 
+# ************************************************************************/
+
+# NLS_ENCODING=UTF-8
+# IBMUPYTH
+
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: STATS_FIRTHLOG.R:85
+msgid "Firth Logistic Regression"
+msgstr ""
+"Logistische Regression von Firth"
+
+#: STATS_FIRTHLOG.R:86
+msgid "Firth Logistic Regression: Warnings"
+msgstr ""
+"Logistische Regression von Firth: Warnungen"
+
+#: STATS_FIRTHLOG.R:91
+msgid "The R %s package is required but could not be loaded."
+msgstr ""
+"Das R %s-Paket ist erforderlich konnte aber nicht geladen werden."
+
+#: STATS_FIRTHLOG.R:103
+msgid "The output dataset name is already in use."
+msgstr ""
+"Der Name des Ausgabedatasets wird bereits verwendet."
+
+#: STATS_FIRTHLOG.R:106
+msgid "The active dataset must have a name to create an output dataset"
+msgstr ""
+"Das aktive Dataset muss einen Namen haben, um ein Ausgabedataset zu erstellen"
+
+#: STATS_FIRTHLOG.R:116
+msgid "The dependent variable must have a scale measurement level"
+msgstr ""
+"Die abhängige Variable muss ein metrisches Messniveau haben"
+
+#: STATS_FIRTHLOG.R:122
+msgid "The dependent variable has values other than 0 and 1 or is constant"
+msgstr ""
+"Die abhängige Variable weist andere Werte als 0 und 1 auf oder ist eine Konstante"
+
+#: STATS_FIRTHLOG.R:171
+msgid "Dependent Variable"
+msgstr ""
+"Abhängige Variable"
+
+#: STATS_FIRTHLOG.R:172
+msgid "Conf. Interval Type"
+msgstr ""
+"Konfidenzintervalltyp"
+
+#: STATS_FIRTHLOG.R:173
+msgid "Conf. Interval Level (%)"
+msgstr ""
+"Konfidenzintervallebene (%)"
+
+#: STATS_FIRTHLOG.R:174
+msgid "Estimation Method"
+msgstr ""
+"Schätzmethode"
+
+#: STATS_FIRTHLOG.R:175
+msgid "Output Dataset"
+msgstr ""
+"Ausgabedataset"
+
+#: STATS_FIRTHLOG.R:176
+msgid "Likelihood Ratio Test"
+msgstr ""
+"Test für Likelihood-Quotienten"
+
+#: STATS_FIRTHLOG.R:177
+msgid "Degrees of Freedom"
+msgstr ""
+"Freiheitsgrade"
+
+#: STATS_FIRTHLOG.R:178
+msgid "Significance"
+msgstr ""
+"Signifikanz"
+
+#: STATS_FIRTHLOG.R:179
+msgid "Number of Complete Cases"
+msgstr ""
+"Anzahl der abgeschlossenen Fälle"
+
+#: STATS_FIRTHLOG.R:180
+msgid "Cases with Missing Data"
+msgstr ""
+"Fälle mit fehlenden Daten"
+
+#: STATS_FIRTHLOG.R:181
+msgid "Number of Iterations"
+msgstr ""
+"Anzahl der Iterationen"
+
+#: STATS_FIRTHLOG.R:182
+msgid "Convergence Status"
+msgstr ""
+"Konvergenzstatus"
+
+#: STATS_FIRTHLOG.R:183
+msgid "Last Log Likelihood Change"
+msgstr ""
+"Letzte Log-Likelihood-Änderung"
+
+#: STATS_FIRTHLOG.R:184
+msgid "Maximum Last Beta Change"
+msgstr ""
+"Maximum letzte Beta-Änderung"
+
+#: STATS_FIRTHLOG.R:190
+msgid "Profile penalized log likelihood"
+msgstr ""
+"Profilpenalisierte Log-Likelihood"
+
+#: STATS_FIRTHLOG.R:191
+msgid "Wald"
+msgstr ""
+"Wald"
+
+#: STATS_FIRTHLOG.R:193
+msgid "Firth penalized maximum likelihood"
+msgstr ""
+"Firth-penalisierte Maximum Likelihood"
+
+#: STATS_FIRTHLOG.R:194
+msgid "maximum likelihood"
+msgstr ""
+"Maximum Likelihood"
+
+#: STATS_FIRTHLOG.R:195
+msgid "--NA--"
+msgstr ""
+"--NV--"
+
+#: STATS_FIRTHLOG.R:203
+msgid "FAILED"
+msgstr ""
+"FEHLGESCHLAGEN"
+
+#: STATS_FIRTHLOG.R:203
+msgid "Converged"
+msgstr ""
+"Konvergiert"
+
+#: STATS_FIRTHLOG.R:210
+msgid "Values"
+msgstr ""
+"Werte"
+
+#: STATS_FIRTHLOG.R:212
+msgid "Firth Logistic Regression Summary"
+msgstr ""
+"Zusammenfassung logistischer Regression nach Firth"
+
+#: STATS_FIRTHLOG.R:214
+msgid "Results computed by R logistf package"
+msgstr ""
+"Durch das R logistf-Paket berechnete Ergebnisse"
+
+#: STATS_FIRTHLOG.R:221
+msgid "Coefficient"
+msgstr ""
+"Koeffizient"
+
+#: STATS_FIRTHLOG.R:221
+msgid "Std. Error"
+msgstr ""
+"Standardfehler"
+
+#: STATS_FIRTHLOG.R:222
+msgid "Lower CI"
+msgstr ""
+"Unteres Konfidenzintervall"
+
+#: STATS_FIRTHLOG.R:222
+msgid "Upper CI"
+msgstr ""
+"Oberes Konfidenzintervall"
+
+#: STATS_FIRTHLOG.R:222
+msgid "Chi-Square"
+msgstr ""
+"Chi-Quadrat"
+
+#: STATS_FIRTHLOG.R:224
+#: STATS_FIRTHLOG.R:225
+msgid "Coefficients"
+msgstr ""
+"Koeffizienten"
+
+#: STATS_FIRTHLOG.R:227
+msgid "Dependent Variable: %s"
+msgstr ""
+"Abhängige Variable: %s"
+
+#: STATS_FIRTHLOG.R:267
+msgid "Predicted probability"
+msgstr ""
+"Vorhergesagte Wahrscheinlichkeit"
+
+#: STATS_FIRTHLOG.R:269
+msgid "Hat Value"
+msgstr ""
+"Hat-Wert"
+
+#: STATS_FIRTHLOG.R:310
+msgid "End of procedure"
+msgstr ""
+"Ende der Prozedur"
+
+#: STATS_FIRTHLOG.R:337
+msgid "Message Number"
+msgstr ""
+"Nachrichtennummer"
+
+
