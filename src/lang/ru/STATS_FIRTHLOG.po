@@ -1,0 +1,232 @@
+#/***********************************************************************
+# * Licensed Materials - Property of IBM 
+# *
+# * IBM SPSS Products: Statistics Common
+# *
+# * (C) Copyright IBM Corp. 1989, 2014
+# *
+# * US Government Users Restricted Rights - Use, duplication or disclosure
+# * restricted by GSA ADP Schedule Contract with IBM Corp. 
+# ************************************************************************/
+
+# NLS_ENCODING=UTF-8
+# IBMUPYTH
+
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: STATS_FIRTHLOG.R:85
+msgid "Firth Logistic Regression"
+msgstr ""
+"Логистическая регрессия Фирта"
+
+#: STATS_FIRTHLOG.R:86
+msgid "Firth Logistic Regression: Warnings"
+msgstr ""
+"Логистическая регрессия Фирта: предупреждения"
+
+#: STATS_FIRTHLOG.R:91
+msgid "The R %s package is required but could not be loaded."
+msgstr ""
+"Необходим пакет R %s, но его не удалось загрузить."
+
+#: STATS_FIRTHLOG.R:103
+msgid "The output dataset name is already in use."
+msgstr ""
+"Имя выходного набора данных уже занято."
+
+#: STATS_FIRTHLOG.R:106
+msgid "The active dataset must have a name to create an output dataset"
+msgstr ""
+"Чтобы создать выходной набор данных, у активного набора данных должно быть имя"
+
+#: STATS_FIRTHLOG.R:116
+msgid "The dependent variable must have a scale measurement level"
+msgstr ""
+"Зависимая переменная должна иметь количественный тип измерений."
+
+#: STATS_FIRTHLOG.R:122
+msgid "The dependent variable has values other than 0 and 1 or is constant"
+msgstr ""
+"У зависимой переменной есть значения помимо 0 и 1 или она постоянная"
+
+#: STATS_FIRTHLOG.R:171
+msgid "Dependent Variable"
+msgstr ""
+"Зависимая переменная"
+
+#: STATS_FIRTHLOG.R:172
+msgid "Conf. Interval Type"
+msgstr ""
+"Тип доверительного интервала"
+
+#: STATS_FIRTHLOG.R:173
+msgid "Conf. Interval Level (%)"
+msgstr ""
+"Уровень доверительного интервала (%)"
+
+#: STATS_FIRTHLOG.R:174
+msgid "Estimation Method"
+msgstr ""
+"Метод оценивания"
+
+#: STATS_FIRTHLOG.R:175
+msgid "Output Dataset"
+msgstr ""
+"Выходной набор данных"
+
+#: STATS_FIRTHLOG.R:176
+msgid "Likelihood Ratio Test"
+msgstr ""
+"Критерий отношения правдоподобия"
+
+#: STATS_FIRTHLOG.R:177
+msgid "Degrees of Freedom"
+msgstr ""
+"Степени свободы"
+
+#: STATS_FIRTHLOG.R:178
+msgid "Significance"
+msgstr ""
+"Значимость"
+
+#: STATS_FIRTHLOG.R:179
+msgid "Number of Complete Cases"
+msgstr ""
+"Количество полных наблюдений"
+
+#: STATS_FIRTHLOG.R:180
+msgid "Cases with Missing Data"
+msgstr ""
+"Наблюдения с пропущенными данными"
+
+#: STATS_FIRTHLOG.R:181
+msgid "Number of Iterations"
+msgstr ""
+"Количество итераций"
+
+#: STATS_FIRTHLOG.R:182
+msgid "Convergence Status"
+msgstr ""
+"Состояние сходимости"
+
+#: STATS_FIRTHLOG.R:183
+msgid "Last Log Likelihood Change"
+msgstr ""
+"Последнее изменение логарифмического правдоподобия"
+
+#: STATS_FIRTHLOG.R:184
+msgid "Maximum Last Beta Change"
+msgstr ""
+"Максимальное последнее изменение бета"
+
+#: STATS_FIRTHLOG.R:190
+msgid "Profile penalized log likelihood"
+msgstr ""
+"Логарифмическое правдоподобие со штрафом профиля"
+
+#: STATS_FIRTHLOG.R:191
+msgid "Wald"
+msgstr ""
+"Вальд"
+
+#: STATS_FIRTHLOG.R:193
+msgid "Firth penalized maximum likelihood"
+msgstr ""
+"Максимальное правдоподобие со штрафом Фирта"
+
+#: STATS_FIRTHLOG.R:194
+msgid "maximum likelihood"
+msgstr ""
+"максимальное правдоподобие"
+
+#: STATS_FIRTHLOG.R:195
+msgid "--NA--"
+msgstr ""
+"--НП--"
+
+#: STATS_FIRTHLOG.R:203
+msgid "FAILED"
+msgstr ""
+"ЗАВЕРШЕНО НЕУДАЧНО"
+
+#: STATS_FIRTHLOG.R:203
+msgid "Converged"
+msgstr ""
+"Сходимость достигнута"
+
+#: STATS_FIRTHLOG.R:210
+msgid "Values"
+msgstr ""
+"Значения"
+
+#: STATS_FIRTHLOG.R:212
+msgid "Firth Logistic Regression Summary"
+msgstr ""
+"Сводка логистической регрессии Фирта"
+
+#: STATS_FIRTHLOG.R:214
+msgid "Results computed by R logistf package"
+msgstr ""
+"Результаты, вычисленные пакетом R logistf"
+
+#: STATS_FIRTHLOG.R:221
+msgid "Coefficient"
+msgstr ""
+"Коэффициент"
+
+#: STATS_FIRTHLOG.R:221
+msgid "Std. Error"
+msgstr ""
+"Стд. ошибка"
+
+#: STATS_FIRTHLOG.R:222
+msgid "Lower CI"
+msgstr ""
+"Нижний ДИ"
+
+#: STATS_FIRTHLOG.R:222
+msgid "Upper CI"
+msgstr ""
+"Верхний ДИ"
+
+#: STATS_FIRTHLOG.R:222
+msgid "Chi-Square"
+msgstr ""
+"Хи-квадрат"
+
+#: STATS_FIRTHLOG.R:224
+#: STATS_FIRTHLOG.R:225
+msgid "Coefficients"
+msgstr ""
+"Коэффициенты"
+
+#: STATS_FIRTHLOG.R:227
+msgid "Dependent Variable: %s"
+msgstr ""
+"Зависимая переменная: %s"
+
+#: STATS_FIRTHLOG.R:267
+msgid "Predicted probability"
+msgstr ""
+"Предсказанная вероятность"
+
+#: STATS_FIRTHLOG.R:269
+msgid "Hat Value"
+msgstr ""
+"Значение с крышечкой"
+
+#: STATS_FIRTHLOG.R:310
+msgid "End of procedure"
+msgstr ""
+"Конец процедуры"
+
+#: STATS_FIRTHLOG.R:337
+msgid "Message Number"
+msgstr ""
+"Номер сообщения"
+
+
