@@ -3,19 +3,20 @@
 # *
 # * IBM SPSS Products: Statistics Common
 # *
-# * (C) Copyright IBM Corp. 2014
+# * (C) Copyright IBM Corp. 2015, 2019
 # *
 # * US Government Users Restricted Rights - Use, duplication or disclosure
 # * restricted by GSA ADP Schedule Contract with IBM Corp. 
 # ************************************************************************/
 
 # author__ = "SPSS, JKP"
-# version__ = "1.0.2"
+# version__ = "1.1.1"
 
 # History
 # 22-apr-2014 Original Version
 # 26-jun-2014 Adapt to incompatible changes in logistf vresion 1.20
-
+# 19-jun-2015 Support for weights and reference category specifications for factors
+# 09-dec-2019 Add full and restricted likelihoods to output
 
 helptext="STATS FIRTHLOG DEPENDENT=variable
     INDEP=list of variables
@@ -72,7 +73,8 @@ STATS FIRTHLOG /HELP.  prints this information and does nothing else.
 "
 
 ### MAIN ROUTINE ###
-dofirth = function(dep, indep, firth=TRUE, conf=.95, ppl=TRUE, dataset=NULL,
+dofirth = function(dep, indep=NULL, firth=TRUE, conf=.95, ppl=TRUE, 
+        dataset=NULL, refcatfactors=NULL, refcats=NULL,
         maxstep=NULL, maxhs=NULL, maxit=NULL, lconv=NULL, gconv=NULL, xconv=NULL,
         plotlist=NULL) {
     #estimate regression discontinuity model
@@ -95,7 +97,7 @@ dofirth = function(dep, indep, firth=TRUE, conf=.95, ppl=TRUE, dataset=NULL,
     controllist = makecontrollist(list(maxit=maxit, maxhs=maxhs, maxstep=maxstep, lconv=lconv, 
                     gconv=gconv, xconv=xconv))
     alpha=(100. - conf)/100.
-    frml = buildfrml(dep, indep)
+    wtvar = spssdictionary.GetWeightVariable()
     allargs = as.list(environment())
     if (!is.null(dataset)) {
         alldatasets = tolower(spssdata.GetDataSetList())
@@ -107,10 +109,18 @@ dofirth = function(dep, indep, firth=TRUE, conf=.95, ppl=TRUE, dataset=NULL,
                 dostop=TRUE)
         }
     }
+
+    dta = getAndConvertData(dep, indep, refcatfactors, refcats, wtvar, warns)
+    indep = names(dta)[-1]
+    if (!is.null(wtvar)) {
+        indep = indep[1:(length(indep)-1)]
+        allargs$wtsum = sum(dta[wtvar])
+    } else {
+        allargs$wtsum = nrow(dta)
+    }
     
-    alldata = c(dep, indep)
-    
-    dta = spssdata.GetDataFromSPSS(alldata, missingValueToNA=TRUE, factorMode="levels")
+    frml = buildfrml(dep, indep)
+    #dta = spssdata.GetDataFromSPSS(alldata, missingValueToNA=TRUE, factorMode="levels")
     # validate the dependent variable
     if (is.factor(dta[[1]])) {
         warns$warn(gtxt("The dependent variable must have a scale measurement level"),
@@ -131,8 +141,13 @@ dofirth = function(dep, indep, firth=TRUE, conf=.95, ppl=TRUE, dataset=NULL,
     } else {
         casenumbers = NULL
     }
-    res = tryCatch(logistf(formula=frml, data=dta, firth=firth, pl=ppl, 
-            alpha=alpha, control=controllist),
+    arglist = list(formula=frml, data=dta, firth=firth, pl=ppl, 
+                alpha=alpha, control=controllist)
+    if (!is.null(wtvar)) {
+        arglist$weights = dta[[wtvar]]
+    }
+
+    res = tryCatch(do.call(logistf, arglist),
         error = function(e) {
             warns$warn(e$message, dostop=TRUE)
             return(NULL)
@@ -142,6 +157,60 @@ dofirth = function(dep, indep, firth=TRUE, conf=.95, ppl=TRUE, dataset=NULL,
     if (!is.null(dataset)) {
         makedataset(allargs, res, casenumbers, warns)
     }
+}
+
+getAndConvertData = function(dep, indep, refvars, refvalues, wtvar, warns) {
+    # get the dependent, independent, and weight variables
+    # augmented by any factors listed in refcatfactors
+    # dep is the dependent variable name
+    # indep is the list of independent variables, which can include factors
+    # refvars lists the factors that have a specified reference category
+    # refcats list the the reference categories
+    # wtvar is the name of the weight variable
+    # warns is the warning class
+    
+    if (is.null(indep) && is.null(refvars)) {
+        warns$warn(gtxt("At least one predictor is required"), dostop=TRUE)
+    }
+    if (is.null(refvars)) {
+        dta = spssdata.GetDataFromSPSS(c(dep, indep, wtvar), 
+            missingValueToNA=TRUE, factorMode="levels")
+    } else {
+        if (length(refvars) != length(refvalues)) {
+            warns$warn(gtxt("The reference category list is invalid"), dostop=TRUE)
+        }
+        # reconstruct independent list to include any new factors
+        # must be cased as original
+        lowerindep = tolower(indep)
+        lowerrefvars = tolower(refvars)
+        allindep = union(lowerindep, lowerrefvars)
+        newindep = setdiff(allindep, lowerindep)
+        newindep = match(newindep, lowerrefvars)
+        indep = c(indep, refvars[newindep])  # might not be any new indep
+        allvars = c(dep, indep, wtvar)
+        dta = spssdata.GetDataFromSPSS(allvars, missingValueToNA=TRUE, factorMode="levels")
+        i = 1
+        for (v in refvars) {
+            if (!is.factor(dta[[v]])) {
+                warns$warn(gtxtf(
+                "A variable for which a reference category was specified is not categorical: %s",
+                v), dostop=TRUE)
+            }
+            lev = levels(dta[[v]])
+            m = match(refvalues[[i]], lev)
+            if (!is.na(m)) {
+                dta[v] = factor(dta[[v]], levels=c(refvalues[[i]], lev[-m]))
+            }
+            i = i + 1
+        }
+    }
+    if (!is.null(wtvar)) {
+        if (is.factor(dta[[wtvar]])) {
+            warns$warn(gtxt("The weight variable must have a scale measurement level"),
+                dostop=TRUE)
+        }
+    }
+    return(dta)
 }
 
 buildfrml = function(dep, indep) {
@@ -173,11 +242,14 @@ displayresults = function(allargs, dta, res, controllist, warns) {
         gtxt("Conf. Interval Level (%)"),
         gtxt("Estimation Method"),
         gtxt("Output Dataset"),
+        gtxt("Full Likelihood"),
+        gtxt("Restricted Likelihood"),
         gtxt("Likelihood Ratio Test"),
         gtxt("Degrees of Freedom"),
         gtxt("Significance"),
         gtxt("Number of Complete Cases"),
         gtxt("Cases with Missing Data"),
+        gtxt("Weight Variable"),
         gtxt("Number of Iterations"),
         gtxt("Convergence Status"),
         gtxt("Last Log Likelihood Change"),
@@ -185,6 +257,12 @@ displayresults = function(allargs, dta, res, controllist, warns) {
     )
 
     lrt = -2*(res$loglik[1] - res$loglik[2])
+
+    if (is.null(res$weights)) {
+        missingcases = allargs$wtsum - res$n
+    } else {
+        missingcases = allargs$wtsum - sum(res$weights, na.rm=TRUE)
+    }
     summaryvalues = list(
         allargs[["dep"]],
         ifelse(allargs[["ppl"]], gtxt("Profile penalized log likelihood"),
@@ -193,11 +271,14 @@ displayresults = function(allargs, dta, res, controllist, warns) {
         ifelse(allargs[["firth"]], gtxt("Firth penalized maximum likelihood"),
             gtxt("maximum likelihood")),
         ifelse(is.null(allargs[["dataset"]]), gtxt("--NA--"), allargs[["dataset"]]),
+        round(res$loglik[1], 4),
+        round(res$loglik[2], 4),
         round(lrt, 4),
         res$df,
         1. - pchisq(lrt, res$df),
         res$n,
-        allargs[["ndtarows"]] - res$n,
+        missingcases,
+        ifelse(is.null(allargs[["wtvar"]]), gtxt("--NA--"), allargs[["wtvar"]]),
         res$iter,
         ifelse(res$conv[[1]] > controllist[["lconv"]] ||
             res$conv[[3]] > controllist[["xconv"]], gtxt("FAILED"), gtxt("Converged")),
@@ -215,6 +296,17 @@ displayresults = function(allargs, dta, res, controllist, warns) {
                            isSplit=FALSE,
                            format=formatSpec.Count
     )
+    if (!is.null(allargs$refcatfactors)) {
+        spsspivottable.Display(
+            data.frame(cbind(allargs$refcats)), 
+            rowlabels=allargs$refcatfactors,
+            title=gtxt("Specified Reference Catgories"),
+            rowdim=gtxt("Factor"),
+            hiderowdimtitle=FALSE,
+            collabels=gtxt("Level"),
+            templateName="STATSFIRTHREFCATS"
+        )
+    }
     
     ddf = data.frame(res$coef, sqrt(diag(res$var)), res$ci.lower, res$ci.upper,
         qchisq(1 - res$prob, 1), res$prob)
@@ -388,7 +480,11 @@ Run = function(args) {
     args = args[[2]]
     oobj = spsspkg.Syntax(list(
         spsspkg.Template("DEPENDENT", subc="",  ktype="existingvarlist", var="dep"),
-        spsspkg.Template("INDEP", subc="", ktype="existingvarlist", var="indep", islist=TRUE),
+        spsspkg.Template("INDEP", subc="", ktype="existingvarlist", var="indep", 
+            islist=TRUE),
+        spsspkg.Template("REFCATFACTORS", subc="", ktype="existingvarlist", 
+            var="refcatfactors", islist=TRUE),
+        spsspkg.Template("REFCATS", subc="", ktype="literal", var="refcats", islist=TRUE),
         
         spsspkg.Template("FIRTH", subc="OPTIONS", ktype="bool", var="firth"),
         spsspkg.Template("PPL", subc="OPTIONS", ktype="bool", var="ppl"),
