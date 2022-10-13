@@ -1,4 +1,5 @@
 Name: STATS FIRTHLOG
+Display-Name: Firth Logistic Regression
 Dialog-Specs: STATS_FIRTHLOG.spd
 Command-Specs: STATS_FIRTHLOG.xml
 Code-Files: STATS_FIRTHLOG.R
@@ -8,7 +9,7 @@ Description: This procedure calculates the Firth logistic regression m
  odel, which can address the separation issues that can arise in stand
  ard logistic regression.
 Author: JKP, IBM SPSS
-Version: 1.0.7
+Version: 1.0.5
 Product-Version: 18
 Date: 4/22/14
 Categories: logistic statistics regression
